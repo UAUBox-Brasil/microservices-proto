@@ -1,7 +1,7 @@
-export interface AuthenticateDto {
+export declare class AuthenticateDto {
     token: string;
 }
-export interface CreateAuthDto {
+export declare class CreateAuthDto {
     name: string;
     email: string;
     telephone: string;
@@ -9,7 +9,7 @@ export interface CreateAuthDto {
     documentType: "CPF" | "CNPJ";
     token: string;
 }
-export interface AuthenticateResponse {
+export declare class AuthenticateResponse {
     id: string;
     uid: string;
     name: string;
@@ -20,3 +20,9 @@ export interface AuthenticateResponse {
     createdAt: Date | string;
     updatedAt: Date | string;
 }
+declare const _default: {
+    AuthenticateDto: typeof AuthenticateDto;
+    CreateAuthDto: typeof CreateAuthDto;
+    AuthenticateResponse: typeof AuthenticateResponse;
+};
+export default _default;
