@@ -22,3 +22,5 @@ export class AuthenticateResponse {
   createdAt: Date | string;
   updatedAt: Date | string;
 }
+
+export default { AuthenticateDto, CreateAuthDto, AuthenticateResponse };
