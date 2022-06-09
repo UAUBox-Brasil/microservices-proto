@@ -10,9 +10,11 @@
   "author": "Mateus José Pretti Tozoni <mateus.tozoni@uaubox.com.br>",
   "license": "MIT",
   "devDependencies": {
+    "husky": "^8.0.1",
     "typescript": "^4.7.3"
   },
   "scripts": {
-    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json"
+    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "prepare": "husky install"
   }
 }
