@@ -1,14 +1,20 @@
-export interface AddressDTO {
+export declare class AddressDTO {
     postalCode: string;
     city: string;
     state: string;
 }
-export interface ReturningShippingPriceDTO {
+export declare class ReturningShippingPriceDTO {
     ammount: Number;
 }
-export interface ShippingPriceDTO {
+export declare class ShippingPriceDTO {
     id: string;
     state: string;
     price: Number;
     createdAt: Date;
 }
+declare const _default: {
+    AddressDTO: typeof AddressDTO;
+    ReturningShippingPriceDTO: typeof ReturningShippingPriceDTO;
+    ShippingPriceDTO: typeof ShippingPriceDTO;
+};
+export default _default;

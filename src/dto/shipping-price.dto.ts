@@ -1,16 +1,18 @@
-export interface AddressDTO {
+export class AddressDTO {
     postalCode: string;
     city: string;
     state: string;
 }
 
-export interface ReturningShippingPriceDTO {
+export class ReturningShippingPriceDTO {
     ammount: Number;
 }
 
-export interface ShippingPriceDTO {
+export class ShippingPriceDTO {
     id: string;
     state: string;
     price: Number;
     createdAt: Date;
 }
+
+export default { AddressDTO, ReturningShippingPriceDTO, ShippingPriceDTO }
