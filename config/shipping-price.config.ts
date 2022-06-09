@@ -1,4 +1,4 @@
-export = {
-    service_name: 'ShippingPriceService',
-    package_name: 'shipping'
-}
+const service_name = 'ShippingPriceService';
+const package_name = 'shipping';
+
+export { service_name, package_name };
