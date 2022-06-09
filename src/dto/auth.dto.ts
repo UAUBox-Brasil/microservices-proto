@@ -1,8 +1,8 @@
-export class AuthenticateDto {
+export interface AuthenticateDto {
   token: string;
 }
 
-export class CreateAuthDto {
+export interface CreateAuthDto {
   name: string;
   email: string;
   telephone: string;
@@ -11,7 +11,7 @@ export class CreateAuthDto {
   token: string;
 }
 
-export class AuthenticateResponse {
+export interface AuthenticateResponse {
   id: string;
   uid: string;
   name: string;
@@ -22,5 +22,3 @@ export class AuthenticateResponse {
   createdAt: Date | string;
   updatedAt: Date | string;
 }
-
-export default { AuthenticateDto, CreateAuthDto, AuthenticateResponse };

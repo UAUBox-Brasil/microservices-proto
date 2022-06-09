@@ -4,5 +4,11 @@
   "main": "index.js",
   "repository": "https://github.com/UAUBox-Brasil/microservices-proto.git",
   "author": "Mateus José Pretti Tozoni <mateus.tozoni@uaubox.com.br>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.7.3"
+  },
+  "scripts": {
+    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json"
+  }
 }
