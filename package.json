@@ -4,7 +4,8 @@
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "files": [
-    "lib/"
+    "lib/",
+    "proto/"
   ],
   "repository": "https://github.com/UAUBox-Brasil/microservices-proto.git",
   "author": "Mateus José Pretti Tozoni <mateus.tozoni@uaubox.com.br>",
