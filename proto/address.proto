@@ -1,0 +1,82 @@
+syntax = "proto3";
+
+package address;
+
+service AddressService {
+  rpc CreateAddress(CreateAddressRequest) returns (AddressResponse) {}
+  rpc RetrieveAddress(AddressRequest) returns (AddressResponse) {}
+  rpc UpdateAddress(UpdateAddressRequest) returns (AddressResponse) {}
+  rpc DeleteAddress(AddressRequest) returns (VerifyTokenResponse) {}
+}
+
+message CreateAddressRequest {
+  string userId  = 1;
+  string postalCode = 2;
+  string state = 3;
+  string city = 4;
+  string district = 5;
+  string street = 6;
+  string number = 7;
+  string complement = 8;
+  bool mainAddress = 9;
+  string reference = 10;
+}
+
+message AddressRequest {
+  string token = 1;
+  string id = 2;
+}
+
+message UpdateAddressRequest {
+  string id = 1;
+  string postalCode = 2;
+  string state = 3;
+  string city = 4;
+  string district = 5;
+  string street = 6;
+  string number = 7;
+  string complement = 8;
+  bool mainAddress = 9;
+  string reference = 10;
+}
+
+message AddressResponse {
+  string id = 1;
+  string userId  = 2;
+  string postalCode = 3;
+  string state = 4;
+  string city = 5;
+  string district = 6;
+  string street = 7;
+  string number = 8;
+  string complement = 9;
+  bool mainAddress = 10;
+  string reference = 11;
+  string createdAt = 12;
+  string updatedAt  = 13;
+}
+
+
+message VerifyTokenResponse {
+  int32 code = 1;
+  string status = 2;
+  string message = 3;
+}
+
+message HealthCheckRequest {
+  string service = 1;
+}
+
+message HealthCheckResponse {
+  enum ServingStatus {
+    UNKNOWN = 0;
+    SERVING = 1;
+    NOT_SERVING = 2;
+    SERVICE_UNKNOWN = 3;  // Used only by the Watch method.
+  }
+  ServingStatus status = 1;
+}
+
+service Health {
+  rpc Check(HealthCheckRequest) returns (HealthCheckResponse);
+}
